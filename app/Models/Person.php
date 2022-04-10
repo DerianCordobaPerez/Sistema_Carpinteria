@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Person extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    public function model(){
+        return $this->morphTo();
+    }
 }
