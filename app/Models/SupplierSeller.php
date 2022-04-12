@@ -4,19 +4,27 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class SupplierSeller extends Model
 {
     use HasFactory;
 
-    public function person(){
+    protected $fillable = [
+        'supplier_id',
+    ];
+
+    public function people(): MorphOne
+    {
         return $this->morphOne(
-            Person::class,
+            People::class,
             'model'
         );
     }
 
-    public function cellphones(){
+    public function cellphones(): MorphMany
+    {
         return $this->morphMany(
             CellPhone::class,
             'model'

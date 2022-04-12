@@ -19,13 +19,13 @@ class DatabaseSeeder extends Seeder
         $this->call(
             PhoneBrandSeeder::class
         );
-        
+
         // \App\Models\User::factory(10)->create();
         \App\Models\Supplier::factory(5)
             ->has(
                 \App\Models\SupplierSeller::factory()
                 ->has(
-                    \App\Models\Person::factory(),
+                    \App\Models\People::factory(),
                     'person'
                 )
                 ->has(
