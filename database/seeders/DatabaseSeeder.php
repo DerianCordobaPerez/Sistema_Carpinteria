@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             ->has(
                 \App\Models\SupplierSeller::factory()
                 ->has(
-                    \App\Models\People::factory(),
+                    \App\Models\Person::factory(),
                     'person'
                 )
                 ->has(
