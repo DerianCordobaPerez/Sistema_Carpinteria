@@ -14,6 +14,14 @@ export default function Menu(props) {
         {
             text: 'Test',
             route: '/test'
+        },
+        {
+            text: 'Compras',
+            route: '/purchases'
+        },
+        {
+            text: 'Proveedores',
+            route: '/suppliers'
         }
     ]
 
