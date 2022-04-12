@@ -17,10 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('model_type');
             $table->unsignedBigInteger('model_id');
-            $table->unsignedBigInteger('purchase_id');
-            $table->foreign('purchase_id')
-                ->references('id')
-                ->on('purchases');
+            $table->foreignId('purchase_id')->constrained();
             $table->float('discount');
             $table->float('iva');
             $table->unsignedBigInteger('amount');

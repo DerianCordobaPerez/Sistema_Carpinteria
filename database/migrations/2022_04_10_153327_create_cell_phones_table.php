@@ -17,10 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('model_type');
             $table->unsignedBigInteger('model_id');
-            $table->unsignedBigInteger('phone_brand_id');
-            $table->foreign('phone_brand_id')
-                ->references('id')
-                ->on('phone_brands'); 
+            $table->foreignId('phone_brand_id')->constrained();
             $table->string('number', 8);
         });
     }

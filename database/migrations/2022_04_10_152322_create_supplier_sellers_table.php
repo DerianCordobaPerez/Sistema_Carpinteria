@@ -15,10 +15,7 @@ return new class extends Migration
     {
         Schema::create('supplier_sellers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('supplier_id');
-            $table->foreign('supplier_id')
-                ->references('id')
-                ->on('suppliers');        
+            $table->foreignId('supplier_id')->constrained();
             $table->timestamps();
         });
     }

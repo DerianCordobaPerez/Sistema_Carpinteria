@@ -15,10 +15,7 @@ return new class extends Migration
     {
         Schema::create('purchase_receipts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('purchase_id');
-            $table->foreign('purchase_id')
-                ->references('id')
-                ->on('purchases'); 
+            $table->foreignId('purchase_id')->constrained();
             $table->string('number');
             $table->date('date');
         });
