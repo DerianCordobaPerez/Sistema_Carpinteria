@@ -15,10 +15,13 @@ import Purchases from "./pages/purchases";
 
 import Layout from "./layouts/Layout";
 
+import Login from "./pages/login";
+
 render(
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Layout>{<Example />}</Layout>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/test" element={<Layout>{<Index />}</Layout>} />
             <Route path="/suppliers" element={
                 <Navigate to="/suppliers/list" replace/>

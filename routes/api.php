@@ -21,6 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/login', [ LoginController::class, 'login' ]);
+Route::post('/register', [ LoginController::class, 'register' ]);
+Route::post('/user', [ LoginController::class, 'user' ]);
 
 Route::prefix('suppliers')->group(function () {
     Route::get('/list', [Suppliers::class, 'list']);
