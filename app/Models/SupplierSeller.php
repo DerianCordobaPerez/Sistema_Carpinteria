@@ -15,7 +15,7 @@ class SupplierSeller extends Model
         'supplier_id',
     ];
 
-    public function people(): MorphOne
+    public function person(): MorphOne
     {
         return $this->morphOne(
             Person::class,
