@@ -8,12 +8,12 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "./../utils/Menu";
+import ConfigMenu from "./configmenu";
 
 export default function Header() {
-
     const [openMenu, setOpenMenu] = useState(false);
 
-    const toogleMenu = ()=> setOpenMenu(!openMenu);
+    const toogleMenu = () => setOpenMenu(!openMenu);
 
     return (
         <header>
@@ -37,14 +37,11 @@ export default function Header() {
                         >
                             Carpi-Co
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        <ConfigMenu />
                     </Toolbar>
                 </AppBar>
             </Box>
-            <Menu 
-                open={openMenu} 
-                toogle={toogleMenu} 
-            />
+            <Menu open={openMenu} toogle={toogleMenu} />
         </header>
     );
 }

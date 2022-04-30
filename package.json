@@ -31,6 +31,7 @@
         "@mui/material": "^5.6.0",
         "normalize.css": "^8.0.1",
         "react-router-dom": "^6.3.0",
+        "react-token-auth": "^2.3.8",
         "recoil": "^0.7.0"
     }
 }

@@ -19,8 +19,8 @@ class LoginController extends Controller
             /** @var \App\Models\User **/
             $user = Auth::user();
             return response()->json([
-                'token' => $user->createToken('authToken')->plainTextToken,
-                'type' => 'Bearer'
+                'accessToken' => $user->createToken('authToken')->plainTextToken,
+                'refreshToken' => $user->createToken('authToken')->plainTextToken
             ], 200);
         }
 
