@@ -2,8 +2,6 @@ import Layout from "../layouts/Layout";
 
 export default function purchases(){
     return(
-        <Layout>
-            Compras
-        </Layout>
+        <h1>Compras</h1>
     );
 }

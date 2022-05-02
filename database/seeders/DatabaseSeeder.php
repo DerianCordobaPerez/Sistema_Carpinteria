@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             PhoneBrandSeeder::class
         );
 
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(1)->create();
         \App\Models\Supplier::factory(5)
             ->has(
                 \App\Models\SupplierSeller::factory()
